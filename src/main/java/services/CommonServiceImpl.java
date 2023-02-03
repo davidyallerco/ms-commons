@@ -4,16 +4,15 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 
-@Service
-public class AlumnoServiceImpl<E,R extends CrudRepository<E,Long>> implements AlumnoService<E> {
+
+public class CommonServiceImpl<E,R extends CrudRepository<E,Long>> implements CommonService<E> {
 
 	
 	@Autowired
-	private R alumnoRepository;
+	protected R alumnoRepository; //protected para que se pueda reutilizar en las clases hijas que hereden
 	
 	@Override
 	@Transactional(readOnly = true)

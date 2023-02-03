@@ -4,7 +4,7 @@ import java.util.Optional;
 
 
 
-public interface AlumnoService<E> {
+public interface CommonService<E> {
 
 	public Iterable<E> buscarTodos();
 	public Optional<E> buscarPorId(Long id);
