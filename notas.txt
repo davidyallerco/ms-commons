@@ -1,0 +1,6 @@
+/*
+ * quitamos el build de xml, ya que ello arranca,
+ * porque no se comportara como una aplicacion sino como una libreria, algo asi
+ -tambien eliminamos la clase principal
+ * 
+ */
